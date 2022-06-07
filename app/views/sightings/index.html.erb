@@ -1,0 +1,44 @@
+<%= form_with method: :get do |form|%>
+  <div>
+    <%= form.label :begin_date%>
+    <%= form.date_field :begin_date%>
+  </div>
+  <br/>
+  <div> 
+    <%= form.label :end_date%>
+    <%= form.date_field :end_date%>
+  </div>
+  <br/>
+  <div>
+    <%= form.label :region_id%>
+    <%= form.select :region_id, Region.pluck(:name, :id)%>
+  </div>
+  <br/>
+  <%= form.submit%>
+<%end%>
+ 
+ 
+<ul>
+   <% @sightings.each do |sighting|%>
+   <li>
+      <%= sighting.date%>
+   </li>
+   <li>
+      <%= sighting.latitude%>
+   </li>
+   <li>
+      <%= sighting.longitude%>
+   </li>
+   <li>
+      <%= sighting.region.name%>
+   </li>
+   <br/>
+   <% end%>
+</ul>
+
+<table>
+  <tr>
+    <td><%= link_to 'Animals', root_path%></td>
+    <td><%= link_to 'Regions', regions_path%></td>
+  </tr>
+</table>

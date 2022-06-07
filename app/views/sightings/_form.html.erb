@@ -1,0 +1,22 @@
+<%= form_with model: [@animal, @animal.sightings.build] do |form|%>
+    <p>
+        <%= form.label :date %>
+        <%= form.date_field :date %>
+    </p>
+    <p>
+        <%= form.label :latitude%><br/>
+        <%= form.number_field :latitude%>
+    </p>
+    <p>
+        <%= form.label :longitude%><br/>
+        <%= form.number_field :longitude%>
+    </p>
+    <p>
+        <%= form.label :region_id%>
+        <%= form.select :region_id, Region.pluck(:name, :id)%>
+    </p>
+    <p>
+        <%= form.submit%>
+    </p>
+
+<% end%>

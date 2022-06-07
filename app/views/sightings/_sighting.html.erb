@@ -1,0 +1,25 @@
+    <p>
+       <strong>Date:</strong>
+       <%= sighting.date%>
+    </p>
+    <p>
+        <strong>latitude:</strong>
+        <%= sighting.latitude%>
+    </p>
+
+    <p>
+        <strong>longitude:</strong>
+        <%= sighting.longitude%>
+    </p>
+
+    <p>
+        <%= link_to 'Destroy Sighting', [sighting.animal, sighting],
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+    </p>
+
+    <p>
+        <%= link_to 'Edit Sighting', edit_animal_sighting_path(params[:id],sighting.id)%>
+    </p>
+
+    

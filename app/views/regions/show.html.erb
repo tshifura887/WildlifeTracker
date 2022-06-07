@@ -1,0 +1,10 @@
+
+<p id="notice"><%= notice %></p>
+<%= link_to 'Animals', root_path%>
+<p>
+  <strong>Region:</strong>
+  <%= @region.name %>
+</p>
+
+<%= link_to 'Edit', edit_region_path(@region) %> |
+<%= link_to 'Back', regions_path %>

@@ -1,0 +1,22 @@
+
+<p>
+   <%= link_to 'Regions', regions_path%>
+</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @animal.name %>
+</p>
+
+<%= link_to 'Edit', edit_animal_path(@animal) %> |
+<%= link_to 'Back', animals_path %>
+<br/>
+<br/>
+
+<h1>Sightings</h1>
+<%= render @animal.sightings%>
+
+<%= link_to 'Add new sighting' , new_animal_sighting_path(@animal)%>
+<%= link_to 'Filter Sightings', animal_sightings_path(@animal) %>
+
