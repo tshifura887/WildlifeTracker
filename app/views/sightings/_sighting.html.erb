@@ -13,6 +13,11 @@
     </p>
 
     <p>
+        <strong>Region</strong>
+        <%= sighting.region.name%>
+    </p>
+
+    <p>
         <%= link_to 'Destroy Sighting', [sighting.animal, sighting],
               method: :delete,
               data: { confirm: "Are you sure?" } %>

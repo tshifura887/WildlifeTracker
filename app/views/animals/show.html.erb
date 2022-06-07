@@ -16,7 +16,7 @@
 
 <h1>Sightings</h1>
 <%= render @animal.sightings%>
-
+<br/>
 <%= link_to 'Add new sighting' , new_animal_sighting_path(@animal)%>
 <%= link_to 'Filter Sightings', animal_sightings_path(@animal) %>
 
